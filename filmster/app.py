@@ -18,11 +18,11 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                           'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
-# Route to render index.html template
+# Route to render recommendor.html template
 @app.route("/")
 def home():
     # Return template and data
-    return render_template("index.html")
+    return render_template("recommendor.html")
 
 @app.route("/makePredictions", methods=["POST"])
 def makePredictions():
